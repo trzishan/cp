@@ -16,7 +16,7 @@ int main(){
 		while (true){
 			(j % 2 == 0) ? mn += mx : mx += mn;
 			count++;
-			if (mn > n) break;
+			if (mn > n || mx > n) break;
 			j++;
 		}
 		cout << count << nl;

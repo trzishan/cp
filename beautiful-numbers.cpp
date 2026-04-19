@@ -8,9 +8,11 @@ using namespace std;
 int main(){
 	int t;
 	cin >> t;
+	string num;
 	for (int i = 0; i < t; i++){
-		cout << "hello" << nl;
+		cin >> num;
 	}
+	cout << num[1];
 	return 0;
 }
 
