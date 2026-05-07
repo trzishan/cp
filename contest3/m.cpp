@@ -7,15 +7,18 @@ int main()
 {	
 	string hello = "hello", given;
 	cin >> given;
-	int indices[100];
+	int i{};
 
-	for(char h : hello)
+	for(char c : given)
 	{	
-		for (char g : given)
+		if (hello[i] == c) i++;
+		if (i == 5)
 		{
-			if (h == g) indeces += 
+			cout << "YES"; 
+			return 0;
 		}
-
 	}
+
+	cout << "NO";
 	return 0;
 }
