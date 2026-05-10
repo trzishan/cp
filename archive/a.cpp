@@ -1,3 +1,4 @@
+// https://codeforces.com/contest/2209/problem/A
 // Author: Tahmid Zishan
 #include <iostream>
 #include <algorithm>
@@ -6,27 +7,22 @@ using namespace std;
 
 void solve()
 {
-	int n, k, k_left;
+		int n, k_left;
 		long long c;
-		cin >> n >> c >> k;
-		if (k >= n) k_left = (k - n);
+		cin >> n >> c >> k_left;
 		int arr[n];
 		for (int i = 0; i < n; i++) cin >> arr[i];
 		sort(arr, arr + n);
-		for (int lmnt : arr) cout << lmnt << ' ';
 		for (int pow : arr)
 		{	
-			if (k == 0) break;
 			if (c >= pow)
 			{
-				int diff = (c - pow);
-				(if diff <= k) k_left -= diff; 
+				long long diff = min(1ll * k_left, (c - pow));
+				k_left -= diff; 
 				pow = pow + diff;
 				c = c + pow;
-				cout << "k left: " << k_left << nl;
 			} 
 			else break;
-			k--;
 		}
 		cout << c << nl;
 }
