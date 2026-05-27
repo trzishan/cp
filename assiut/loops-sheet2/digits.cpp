@@ -1,22 +1,22 @@
 // Author: Tahmid Zishan
 #include <iostream>
 using namespace std;
-#define nl '\n'
+
+void solve()
+{
+	string a;
+	cin >> a;
+	for (int i = a.length() - 1; i >= 0; i--)
+	{
+		cout << a[i] << ' ';
+	}
+	cout << '\n';
+}
 
 int main()
 {
-	int n;
-	cin >> n;
-	for (int i = 1; i <= n; i++)
-	{
-		int k;
-		cin >> k;
-		while (k > 0)
-		{
-			cout << k % 10 << ' ';
-			k /= 10;
-		}
-		cout << nl;
-	}
+	int t;
+	cin >> t;
+	while (t--) solve();
 	return 0;
 }
