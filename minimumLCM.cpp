@@ -1,0 +1,11 @@
+https://codeforces.com/problemset/problem/1765/M
+// Author: Tahmid Zishan
+#include <iostream>
+using namespace std;
+#define nl '\n'
+
+int main()
+{
+	
+	return 0;
+}
