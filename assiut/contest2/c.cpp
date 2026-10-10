@@ -1,5 +1,4 @@
 // Author: Tahmid Zishan
-#include <cmath>
 #include <iostream>
 using namespace std;
 #define nl '\n'
@@ -7,14 +6,23 @@ using namespace std;
 int main(){
     int n, l;
     cin >> n >> l;
-    for (int i = 0; i < ceil(n / l); i++){
-        int min = 1000000000;
-        for (int j = 0; j < l; j++){
-            int x; // = 1000000000;
-            cin >> x;
-            if (x < min) min = x;
+    
+    int min = 1000000000;
+    int l_count = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+        cin >> x;
+        if (x < min) min = x;
+        l_count++;
+        if (l_count == l || i == (n - 1))
+        {
+            cout << min << ' ';
+            min = 1000000000;
+            l_count = 0;
         }
-        cout << min << ' ';
+
     }
     return 0;
 }
